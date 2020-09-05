@@ -10,7 +10,7 @@ import math
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import lpips
+#import lpips
 
 eps = 1e-6
 
@@ -584,9 +584,9 @@ if __name__ == "__main__":
             acc = metric(y_pred, y_true).item()
             print("{} ==> {}".format(repr(metric), acc))
                   
-            metric = LPIPS(cuda)
-            acc = metric(y_pred, y_true).item()
-            print("{} ==> {}".format(repr(metric), acc))
+#             metric = LPIPS(cuda)
+#             acc = metric(y_pred, y_true).item()
+#             print("{} ==> {}".format(repr(metric), acc))
             
             metric = AE()
             acc = metric(y_pred, y_true).item()
